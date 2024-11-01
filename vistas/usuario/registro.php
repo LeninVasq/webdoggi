@@ -20,33 +20,40 @@ $usuario->setEmail($usu);
 $usuario->setContra($contra);
 
 
-$nombre;
+$nombre =[];
 $tipo;
-$correo;
+$correo = [];
 foreach($controller_usuario->consulta() as $objusuario){
-    $nombre= $objusuario -> getNombreUsuario();
-    $correo= $objusuario ->getEmail();
+    $nombre []= $objusuario -> getNombreUsuario();
+    $correo[]= $objusuario ->getEmail();
 }
 
-echo $nombre;
-echo "<br>";
-echo $correo;
+$ingresar = false;
 
 
-if($nombre == $usu){
-    $datos['usurepe'] ="El usuario ya esta registrado";
-}
-else{
-    if($email != $correo){
-
-        $datos['regitra'] = "Registrado exitosamente";
-        
+foreach ($nombre as $nombres) {
+    if($nombres == $usu){
+        $datos['usurepe'] ="El usuario ya esta registrado";
+        $ingresar = true;
+        break;
     }
-    else{
+    
+}
+foreach ($correo as $correos) {
+    
+
+    if($email == $correos){
         $datos['correorepe'] ="El correo ya esta registrado";
-
+        $ingresar = true;
+        break;
     }
+
 }
+
+if (!$ingresar) {
+    $datos['regitra'] = "Registrado exitosamente";
+}
+
 
 
 echo json_encode($datos);
