@@ -15,7 +15,7 @@ $controller_usuario = new controller_usuario();
 $usuario->setNombreUsuario($usu);
 $usuario->setContra($contra);
 $usuario->setEmail($email);
-$usuario->setNombre($nombre);
+$usuario->setNombre($nom);
 
 
 $nombre =[];
