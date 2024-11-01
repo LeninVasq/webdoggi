@@ -12,12 +12,10 @@ $controller_usuario = new controller_usuario();
 @$email = $_REQUEST['correo'];
 @$contra = $_REQUEST['pas'];
 
-
-
-
-
-$usuario->setEmail($usu);
+$usuario->setNombreUsuario($usu);
 $usuario->setContra($contra);
+$usuario->setEmail($email);
+$usuario->setNombre($nombre);
 
 
 $nombre =[];
@@ -51,7 +49,8 @@ foreach ($correo as $correos) {
 }
 
 if (!$ingresar) {
-    $datos['regitra'] = "Registrado exitosamente";
+    $controller_usuario->insert($usuario);
+    $datos['registra'] = "Registrado exitosamente";
 }
 
 
