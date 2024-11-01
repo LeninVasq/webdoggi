@@ -4,10 +4,10 @@ $razas = new Raza();
 $controller_raza = new controller_raza();
 
 
-$datos = []; 
+$datos["razas"] = []; // Inicializamos el array de razas
 
 foreach ($controller_raza->consultar() as $objraza) {
-    $datos["razas"] = [
+    $datos["razas"][] = [
         'id' => $objraza->getId(),
         'nombre_raza' => $objraza->getNombreRaza()
     ];
