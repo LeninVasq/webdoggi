@@ -14,6 +14,9 @@ class Contenido
             case "login":
                 $pagina = "vistas/usuario/login.php";
                 break;
+                case "registro":
+                    $pagina = "vistas/usuario/registro.php";
+                    break;
             
             default:
                 $pagina = "Vistas/e404.php";
