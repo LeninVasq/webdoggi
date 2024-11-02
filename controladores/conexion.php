@@ -1,10 +1,10 @@
 <?php
 date_default_timezone_set('America/El_Salvador');
 
-if(!defined('SERVIDOR')) define('SERVIDOR','bvi2yropsh0ebt44sgwi-mysql.services.clever-cloud.com');
-if(!defined('USUARIO')) define('USUARIO','up91g9pbkwcaqdbs');
-if(!defined('CLAVE')) define('CLAVE','hZrZMi3M3yAMsayD6Coa');
-if(!defined('DATABASE')) define('DATABASE','bvi2yropsh0ebt44sgwi');
+if(!defined('SERVIDOR')) define('SERVIDOR','localhost');
+if(!defined('USUARIO')) define('USUARIO','bajeiiuy_lenin_vasquez');
+if(!defined('CLAVE')) define('CLAVE','vasques$299');
+if(!defined('DATABASE')) define('DATABASE','bajeiiuy_web');
 
 class conexion {
     private $connect;
